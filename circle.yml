@@ -1,3 +1,8 @@
+general:
+  branches:
+    only:
+      - source
+
 machine:
   environment:
     USER_NAME: bm-bot
@@ -5,7 +10,6 @@ machine:
 
 dependencies:
   post:
-    - ls
     - bundle exec jekyll build --future
 
 test:
