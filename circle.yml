@@ -4,7 +4,7 @@ dependencies:
 
 test:
   post:
-    - bundle exec htmlproofer ./_site --check-html --disable-external
+    - bundle exec htmlproofer ./_site --allow-hash-href --disable-external --assume-extension --empty-alt-ignore --file-ignore='.*' --checks-to-ignore='LinkCheck','ImageCheck'
 
 # deployment:
 #   prod:
