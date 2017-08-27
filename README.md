@@ -6,7 +6,7 @@ Each new author should do the following.
 ```yml
 authors:
   sirmeow:  # Author Identifier for internal use
-    name: Sir Meow
+  name: Sir Meow
 ```
 
 2. Create a sub-folder with their username on the `_blogs` folder.
