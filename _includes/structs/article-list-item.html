@@ -15,10 +15,10 @@
   </header>
   <main class="post-excerpt" itemprop="description">
     {% if post.content contains '<!-- more -->' %}
-        {{ post.content | split:'<!-- more -->' | first | strip_html }}
+        {{ post.content | split:'<!-- more -->' | first | strip_html_excerpt }}
         <p><a class="read-more" href="{{ post.url }}">Read on →</a></p>
     {% else %}
-        {{ post.content | strip_html }}
+        {{ post.content | strip_html_excerpt }}
     {% endif %}
   </main>
 </article>
