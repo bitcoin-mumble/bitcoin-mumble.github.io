@@ -1,11 +1,8 @@
 # Global settings
-url: http://www.tests.com
 title: Bitcoin Mumble Community
 description: Connecting Bitcoin fans and traders
-twitter_username: SomerTwrar
-github_username: SOmrigsgigtuhb
-
-lsi: false
+twitter_username: BitcoinMumble
+github_username: bitcoin-mumble
 
 timezone: Etc/UTC
 
@@ -20,17 +17,13 @@ category_dir: blog/categories
 
 include: ['_pages']
 
-
-# # URLs
+# URLs
 permalink: /:categories/:year/:title
-#permalink: /:categories/:title
-#permalink: /:categories/:year/:month/:title
-#permalink: date
-#permalink: none
 
 # Author related
 author_dir: blogs
 
+##########
 # Authors
 authors:
   sirmeow:
@@ -39,7 +32,7 @@ authors:
     twitter: OneSirMeow
     github: cryptagoras
     telegram: SirMeow
-    byline: something something and less
+    byline: Multitasking while multitasking while multitasking
 
   cryptobloomberg:
     name: Crypto.Bloomberg

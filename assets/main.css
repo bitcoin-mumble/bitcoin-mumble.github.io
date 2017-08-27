@@ -92,7 +92,7 @@ a { color: #333; text-decoration: none; transition: border-color .1s, color .1s;
 a:hover { color: #000; }
 
 p, dl, dd, ul, ol, blockquote, pre, table { margin: 0 0 28px; }
-@media (min-width: 768px) { p, dl, dd, ul, ol, blockquote, pre, table { margin: 0 0 30px; } }
+@media (min-width: 768px) { p, dl, dd, ul, ol, blockquote, pre, table { margin: 0 0 10px; } }
 
 dt { font-weight: bold; }
 
@@ -301,6 +301,7 @@ iframe, .gist, .fluid-width-video-wrapper { display: block; margin: 28px 0; }
 /* Layout */
 header + main.container {
   padding-top: 15px;
+  font-size: 0.8em;
 }
 
 /**************/
@@ -352,6 +353,10 @@ h2 {
   margin-left: 10px;
 }
 
+.meta.author-info > .byline {
+  font-style: italic;
+}
+
 /* Blog post - Single view */
 .article-container .entry-title {
   border-left: 5px solid;
@@ -388,4 +393,8 @@ h2 {
 .author-index .date-spacer {
   width: 90px;
   display: inline-block;
+}
+.author-index > h5.inverse-heading {
+  margin-bottom: 5px;
+  font-style: italic;
 }

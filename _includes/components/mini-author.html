@@ -11,8 +11,11 @@
 
   {% if author %}
     <div class="meta author-info">
+      {% if author.byline %}
+        <span class="byline">{{author.byline}}</span><br/>
+      {% endif %}
       {% unless hideAuthor %}
-        <span class="byline author vcard">~<a href ="/{{site.author_dir}}/{{key}}">{{ author.name }}</a></span>
+        <span class="author vcard">~<a href ="/{{site.author_dir}}/{{key}}">{{ author.name }}</a></span>
       {% endunless %}
       {% if author.twitter %}
         <span class="fn">

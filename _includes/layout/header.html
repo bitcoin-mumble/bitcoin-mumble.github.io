@@ -31,6 +31,14 @@
             <a href="/blogs">Blogs</a>
           </li>
 
+          {% if page.section == "join" %}
+          <li class="site-nav-current">
+          {% else %}
+          <li>
+          {% endif %}
+            <a href="/join">Join</a>
+          </li>
+
           {% if page.section == "about" %}
           <li class="site-nav-current">
           {% else %}
