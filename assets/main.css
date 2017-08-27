@@ -336,7 +336,7 @@ h2 {
 
 /* Author info */
 .author-info {
-  font-size: 14px;
+  font-size: 12px;
   opacity: 0.75;
   border-bottom: 1px solid #eee;
   padding-bottom: 10px;
@@ -351,6 +351,14 @@ h2 {
 .author-info img {
   margin-right: 4px;
   margin-left: 10px;
+}
+
+.author-info--bottom {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 30px;
 }
 
 .meta.author-info > .byline {
@@ -371,6 +379,11 @@ h2 {
   font-size: 11px;
   line-height: 15px;
   color: #999;
+}
+.article-container .meta-container {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* Tidbits */

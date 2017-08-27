@@ -6,9 +6,8 @@
         <h2 class="entry-title">{{ page.title }}</h2>
       </a>
       {% if page.date %}
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_string }}</time>
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_string }}</time> <small>{% include components/author-name.html %}</small>
       {% endif %}
-      {% include components/mini-author.html %}
     </header>
   </div>
 
@@ -62,5 +61,10 @@
       </p>
     {% endif %}
   </div>
+
+  <footer>
+    {% assign author_bottom = true %}
+    {% include components/mini-author.html %}
+  </footer>
 
 </main>

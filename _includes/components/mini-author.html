@@ -10,7 +10,7 @@
   {% assign author = site.authors[key] %}
 
   {% if author %}
-    <div class="meta author-info">
+    <div class="meta author-info{% if author_bottom %} author-info--bottom{% endif %}">
       {% if author.byline %}
         <span class="byline">{{author.byline}}</span><br/>
       {% endif %}
@@ -19,17 +19,17 @@
       {% endunless %}
       {% if author.twitter %}
         <span class="fn">
-          <a href="https://twitter.com/{{ author.twitter }}" target="_external"><img width="20" src="/assets/imgs/twitter.svg" />{{author.twitter}}</a>
+          <a href="https://twitter.com/{{ author.twitter }}" target="_external"><img width="14" src="/assets/imgs/twitter.svg" />{{author.twitter}}</a>
         </span>
       {% endif %}
       {% if author.telegram %}
         <span class="fn">
-          <a href="https://telegram.me/{{ author.telegram }}" target="_external"><img width="20" src="/assets/imgs/telegram.svg" />{{author.telegram}}</a>
+          <a href="https://telegram.me/{{ author.telegram }}" target="_external"><img width="14" src="/assets/imgs/telegram.svg" />{{author.telegram}}</a>
         </span>
       {% endif %}
       {% if author.github %}
         <span class="fn">
-          <a href="https://github.com/{{ author.github }}" target="_external"><img width="20" src="/assets/imgs/github.svg" />{{author.github}}</a>
+          <a href="https://github.com/{{ author.github }}" target="_external"><img width="14" src="/assets/imgs/github.svg" />{{author.github}}</a>
         </span>
       {% endif %}
     </div>
