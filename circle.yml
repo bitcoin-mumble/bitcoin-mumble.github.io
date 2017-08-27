@@ -20,5 +20,6 @@ deployment:
   production:
     branch: source
     commands:
+      - ssh -T git@github.com
       - chmod +x ./_utils/auto
       - ./_utils/auto
