@@ -20,4 +20,5 @@ deployment:
   production:
     branch: source
     commands:
+      - chmod +x ./_utils/auto
       - ./_utils/auto
