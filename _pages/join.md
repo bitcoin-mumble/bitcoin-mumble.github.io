@@ -19,6 +19,8 @@ authors:
   # - must not contain special characters
   sirmeow:
 ​    name: Sir Meow
+​    twitter: OneSirMeow
+​    byline: Coder, trader, getting bored easily af
 ​    # Info about yourself
 ​    # (name, site, twitter, github, telegram, byline)
 ```

@@ -8,8 +8,10 @@ section: home
 <div class="post-list">
   {% assign index = true %}
   {% for post in paginator.posts %}
-    {% assign content = post.content %}
-    {% include structs/article-list-item.html %}
+    {% unless post.noFrontpage %}
+      {% assign content = post.content %}
+      {% include structs/article-list-item.html %}
+    {% endunless %}
   {% endfor %}
 
   <div class="pagination">
