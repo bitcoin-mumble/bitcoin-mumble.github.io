@@ -18,7 +18,7 @@ authors:
   # Author Identifier for internal use
   # - must not contain special characters
   sirmeow:
-​    name: Sir Meow
+​    name: SirMeow
 ​    twitter: OneSirMeow
 ​    byline: Coder, trader, getting bored easily af
 ​    # Info about yourself
