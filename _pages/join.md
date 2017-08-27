@@ -15,9 +15,8 @@ Each new author should do the following.
 1. Add yourself on `_config.yml` on the `authors` section:
 ```yml
 authors:
-  # Author Identifier for internal use
-  # - must not contain special characters
-  sirmeow:
+​    ​    ​   # (must not contain special characters)
+  sirmeow: # Author Identifier for internal use
 ​    name: SirMeow
 ​    twitter: OneSirMeow
 ​    byline: Coder, trader, getting bored easily af
@@ -26,10 +25,10 @@ authors:
 ```
 
 2. Create a sub-folder with their username on the `_blogs` folder.
-The name of the sub-folder will be used on the permalink of the blog posts as `/blogs/{username}/{post-title}`
+The name of the sub-folder will be used on the permalink of the blog posts as `/blogs/{authorId}/{post-title}`
 
 ## Creating new blog post
-1. Find your blog posts sub-folder `/blogs/{username}/_posts/`
+1. Find your blog posts sub-folder `/blogs/{authorId}/_posts/`
 2. Create a new file `YYYY-MM-DD-{some-title}.md`
 3. Add the following on the top of the post file
 ```md
