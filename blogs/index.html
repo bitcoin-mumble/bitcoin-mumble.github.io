@@ -1,0 +1,17 @@
+---
+layout: default
+section: blogs
+---
+
+<div class="post-list">
+  {% assign authorPosts = site.posts | group_by:"author" %}
+  {% assign authors = authorPosts | sort: 'name' %}
+
+  <h5 class="inverse-heading">Authors</h5>
+  <ul>
+  {% for author in authors %}
+    {% assign authorInfo = site.authors[author.name] %}
+    <li><a href="/{{ site.author_dir }}/{{ author.name }}">{{ authorInfo.name }} <small>({{ author.size }} Posts)</small></a></li>
+  {% endfor %}
+  </ul>
+</div>

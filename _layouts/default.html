@@ -1,0 +1,17 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+<html>
+{% include layout/head.html %}
+<body>
+  <header id="banner">
+    {% include layout/header.html %}
+  </header>
+  <main class="container">
+    {{ content | expand_urls: root_url }}
+  </main>
+  {% unless page.hideFooter %}
+    <footer id="site-footer">
+      {% include layout/footer.html %}
+    </footer>
+  {% endunless %}
+</body>
+</html>

@@ -1,0 +1,46 @@
+# Global settings
+url: http://www.tests.com
+title: Bitcoin Mumble Community
+description: Connecting Bitcoin fans and traders
+twitter_username: SomerTwrar
+github_username: SOmrigsgigtuhb
+
+lsi: false
+
+timezone: Etc/UTC
+
+# Site structure
+paginate: 10
+paginate_path: /blog/:num/
+
+recent_posts: 5
+excerpt_link: Read More
+titlecase: true
+category_dir: blog/categories
+
+include: ['_pages']
+
+
+# # URLs
+permalink: /:categories/:year/:title
+#permalink: /:categories/:title
+#permalink: /:categories/:year/:month/:title
+#permalink: date
+#permalink: none
+
+# Author related
+author_dir: blogs
+
+# Authors
+authors:
+  sirmeow:
+    name: SirMeow
+    site: http://twitter.com/OneSirMeow
+    twitter: OneSirMeow
+    github: cryptagoras
+    telegram: SirMeow
+    byline: something something and less
+
+  cryptobloomberg:
+    name: Crypto.Bloomberg
+    site: http://www.bitcoinmumble.com

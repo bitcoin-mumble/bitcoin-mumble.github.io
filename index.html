@@ -1,1 +1,27 @@
-test
+---
+layout: default
+section: home
+---
+
+<h5 class="inverse-heading">Community's Latest Posts</h5>
+
+<div class="post-list">
+  {% assign index = true %}
+  {% for post in paginator.posts %}
+    {% assign content = post.content %}
+    {% include structs/article-list-item.html %}
+  {% endfor %}
+
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    {% endif %}
+    {% unless paginator.total_pages == 1 %}
+      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% endunless %}
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Older</a>
+    {% endif %}
+  </div>
+</div>
