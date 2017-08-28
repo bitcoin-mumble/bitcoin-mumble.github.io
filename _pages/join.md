@@ -12,11 +12,12 @@ You'll have to fork it and follow the below to become an author.
 
 ### Joining as a new author
 Each new author should do the following.
-1. Add yourself on `_config.yml` on the `authors` section:
+1. Fork [https://github.com/bitcoin-mumble/bitcoin-mumble.github.io](https://github.com/bitcoin-mumble/bitcoin-mumble.github.io)
+2. Add yourself on `_config.yml` on the `authors` section: [[LINK](https://github.com/bitcoin-mumble/bitcoin-mumble.github.io/edit/source/_config.yml)]
 ```yml
 authors:
 ​    ​    ​   # (must not contain special characters)
-  sirmeow: # Author Identifier for internal use
+  sirmeow: # Author Identifier for url+folder
 ​    name: SirMeow
 ​    twitter: OneSirMeow
 ​    byline: Coder, trader, getting bored easily af
@@ -24,12 +25,14 @@ authors:
 ​    # (name, site, twitter, github, telegram, byline)
 ```
 
-2. Create a sub-folder with their username on the `_blogs` folder.
-The name of the sub-folder will be used on the permalink of the blog posts as `/blogs/{authorId}/{post-title}`
+3. Create a sub-folder with their username on the `_blogs` folder.
+- Link: [https://github.com/bitcoin-mumble/bitcoin-mumble.github.io/new/source/blogs/MYAUTHORID/_posts/](https://github.com/bitcoin-mumble/bitcoin-mumble.github.io/new/source/blogs/MYAUTHORID/_posts/)
+- Replace MYNAME with your Author Identifier.
+- The name of the sub-folder will be used on the permalink of the blog posts as `/blogs/{authorId}/{post-title-slug}`
 
 ## Creating new blog post
 1. Find your blog posts sub-folder `/blogs/{authorId}/_posts/`
-2. Create a new file `YYYY-MM-DD-{some-title}.md`
+2. Create a new file `YYYY-MM-DD-{some-title}.md`  (the date part is required)
 3. Add the following on the top of the post file
 ```md
 ---
