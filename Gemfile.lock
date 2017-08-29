@@ -79,6 +79,7 @@ DEPENDENCIES
   html-proofer
   jekyll
   jekyll-paginate
+  rouge
 
 RUBY VERSION
    ruby 2.3.1p112
