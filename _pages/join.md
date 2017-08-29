@@ -47,3 +47,8 @@ slug: black-swansons
 - The only required metadata are (layout, title, author).
 - The `slug` will be used as the last part of the permalink url &amp; by default it will take the name of the post file.
 - The final URL will be `/blogs/{username}/{YYYY}/{slug}`
+
+## More info
+You can read some more info around the tech thinking on [/blogs/sirmeow/2017/making-of](/blogs/sirmeow/2017/making-of).
+
+Feel free to ask on Mumble for more info.

@@ -32,4 +32,6 @@ savedBytesPct = 46
 satsSaved: 14508
 ```
 
+Kudos to [Smartbit.com.au](https://www.smartbit.com.au) for providing a free [API](https://www.smartbit.com.au/api) that includes the witness data.
+
 Note: up until today most block explorer display the fee rate (sats/byte) using the old `size` instead of `vsize`, so the fee rate for SegWit TXs is wrong. But [Trezor's bitcore instances](https://btc-bitcore1.trezor.io) seem to have the correct functionality.
