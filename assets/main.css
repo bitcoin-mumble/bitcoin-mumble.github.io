@@ -472,6 +472,8 @@ h2 {
   background: #ccc;
   color: #fff;
   padding: 2px 4px;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 /* Author-index */

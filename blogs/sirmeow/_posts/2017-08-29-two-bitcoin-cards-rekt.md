@@ -5,6 +5,7 @@ author: sirmeow
 ---
 
 Two Bitcoin debit/pre-paid card programs seem to have been affected by regulations or license restrictions and are being forced to stop or restrict their card offerings.
+<!-- more -->
 
 Yesterday [Shakepay](https://shakepay.co) sent an email regarding the change. They are forced to serve only the European Territory (45 countries), while they used to serve [135 countries](http://web.archive.org/web/20170610151913/https://help.shakepay.co/visa-debit-card/what-countries-can-shakepay-issue-to) among which were Australia and Canada, although not USA.
 
