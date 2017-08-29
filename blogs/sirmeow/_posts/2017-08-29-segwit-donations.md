@@ -7,7 +7,7 @@ noFrontpage: true
 
 If a donation includes an input with Witness data we do some calculations and generate the following message.
 
-![SegWit Donation message](http://i.imgur.com/o5qPvaG.png?1)
+![SegWit Donation message](https://i.imgur.com/o5qPvaG.png?1)
 
 Here are the calculations in a bit more detail.
 
