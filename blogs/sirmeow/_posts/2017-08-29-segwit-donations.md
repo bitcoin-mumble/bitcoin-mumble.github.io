@@ -29,7 +29,7 @@ results to
 satsPerByte = 18
 savedBytes = 806
 savedBytesPct = 46
-satsSaved: 14508
+satsSaved = 14508
 ```
 
 Kudos to [Smartbit.com.au](https://www.smartbit.com.au) for providing a free [API](https://www.smartbit.com.au/api) that includes the witness data.
