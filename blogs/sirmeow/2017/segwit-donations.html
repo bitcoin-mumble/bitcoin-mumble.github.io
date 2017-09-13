@@ -1,0 +1,177 @@
+
+<html>
+
+<link rel="stylesheet" type="text/css" href="/assets/main.css" />
+
+<body>
+  <a href="https://github.com/bitcoin-mumble/bitcoin-mumble.github.io" target="_blank" style="position: absolute; top: 0; right: 0; border: 0; z-index: 5;" ><img src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+  <header id="banner">
+    <header class="site-header">
+  <div class="container">
+
+    <nav class="site-nav">
+      <button class="site-nav-toggle">
+        <span class="screen-reader">Menu</span>
+        <svg class="site-nav-hamburger" viewBox="0 0 18 14">
+          <path d="M0 0h18v2H0zM0 6h18v2H0zM0 12h18v2H0z"></path>
+        </svg>
+        <svg class="site-nav-close" viewBox="0 0 18 14">
+          <path d="M16 12.586L3.414 0 2 1.414 14.586 14 16 12.586z"></path>
+          <path d="M2 12.586L14.586 0 16 1.414 3.414 14 2 12.586z"></path>
+        </svg>
+      </button>
+
+      <ul class="site-nav-list clearfix">
+
+          
+          <li>
+          
+            <a href="/">Home</a>
+          </li>
+
+          
+          <li>
+          
+            <a href="/blogs">Blogs</a>
+          </li>
+
+          
+          <li>
+          
+            <a href="/join">Join</a>
+          </li>
+
+          
+          <li>
+          
+            <a href="/about">About</a>
+          </li>
+
+      </ul>
+    </nav>
+
+    <h1 class="site-title">
+      <a href="/">Bitcoin Mumble</a>
+    </h1>
+  </div>
+</header>
+
+  </header>
+  <main class="container">
+    <div>
+  <article class="hentry" role="article">
+    <main class="article-container">
+
+  <div class="meta-container">
+    <header>
+      <a href="">
+        <h2 class="entry-title">SegWit donations</h2>
+      </a>
+      
+        <time datetime="2017-08-29T00:00:00+00:00" itemprop="datePublished">29 Aug 2017</time> <small>
+
+
+  
+
+  
+    <span class="author vcard">~<a href ="/blogs/sirmeow">SirMeow</a></span>
+  
+
+</small>
+      
+    </header>
+  </div>
+
+  <div class="content-container">
+    
+      <div class="entry-content"><p>If a donation includes an input with Witness data we do some calculations and generate the following message.</p>
+
+<p><img src="https://i.imgur.com/o5qPvaG.png?1" alt="SegWit Donation message" /></p>
+
+<p>Here are the calculations in a bit more detail.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">satsPerByte</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">utx</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">fee_int</span> <span class="o">/</span> <span class="nx">utx</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">vsize</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">savedBytes</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">utx</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">size</span> <span class="o">-</span> <span class="nx">utx</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">vsize</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">savedBytesPct</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">((</span><span class="nx">savedBytes</span> <span class="o">/</span> <span class="nx">utx</span><span class="p">.</span><span class="nx">payload</span><span class="p">.</span><span class="nx">transaction</span><span class="p">.</span><span class="nx">size</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">satsSaved</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">satsPerByte</span> <span class="o">*</span> <span class="nx">savedBytes</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>One example with 10 inputs and</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">fee_int</span> <span class="o">=</span> <span class="mi">16235</span>
+<span class="nx">vsize</span> <span class="o">=</span> <span class="mi">951</span>
+<span class="nx">size</span> <span class="o">=</span> <span class="mi">1757</span>
+</code></pre>
+</div>
+<p>results to</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">satsPerByte</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="nx">savedBytes</span> <span class="o">=</span> <span class="mi">806</span>
+<span class="nx">savedBytesPct</span> <span class="o">=</span> <span class="mi">46</span>
+<span class="nx">satsSaved</span> <span class="o">=</span> <span class="mi">14508</span>
+</code></pre>
+</div>
+
+<p>Kudos to <a href="https://www.smartbit.com.au">Smartbit.com.au</a> for providing a free <a href="https://www.smartbit.com.au/api">API</a> that includes the witness data.</p>
+
+<p>Note: up until today most block explorer display the fee rate (sats/byte) using the old <code class="highlighter-rouge">size</code> instead of <code class="highlighter-rouge">vsize</code>, so the fee rate for SegWit TXs is wrong. But <a href="https://btc-bitcore1.trezor.io">Trezor’s bitcore instances</a> seem to have the correct functionality.</p>
+</div>
+    
+
+    
+  </div>
+
+  <footer>
+    
+    
+
+
+  
+
+  
+    <div class="meta author-info author-info--bottom">
+      
+        <span class="byline">Multitasking while multitasking while multitasking</span><br/>
+      
+      
+        <span class="author vcard">~<a href ="/blogs/sirmeow">SirMeow</a></span>
+      
+      
+        <span class="fn">
+          <a href="https://twitter.com/OneSirMeow" target="_external"><img width="14" src="/assets/imgs/twitter.svg" />OneSirMeow</a>
+        </span>
+      
+      
+        <span class="fn">
+          <a href="https://telegram.me/SirMeow" target="_external"><img width="14" src="/assets/imgs/telegram.svg" />SirMeow</a>
+        </span>
+      
+      
+        <span class="fn">
+          <a href="https://github.com/cryptagoras" target="_external"><img width="14" src="/assets/imgs/github.svg" />cryptagoras</a>
+        </span>
+      
+    </div>
+  
+
+
+  </footer>
+
+</main>
+
+  </article>
+</div>
+
+  </main>
+  
+    <footer id="site-footer">
+      <footer class="site-footer">
+  <div class="container">
+    BitcoinMumble is a community of crypto-ethusiants, traders and developers hanging around and discussing via audio &amp; text through Mumble.
+    Feel free to join us at <a href="https://bitcoinmumble.com">bitcoinmumble.com</a>.
+  </div>
+</footer>
+
+    </footer>
+  
+</body>
+</html>

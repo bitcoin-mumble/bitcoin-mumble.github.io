@@ -1,0 +1,132 @@
+
+<html>
+
+<link rel="stylesheet" type="text/css" href="/assets/main.css" />
+
+<body>
+  <a href="https://github.com/bitcoin-mumble/bitcoin-mumble.github.io" target="_blank" style="position: absolute; top: 0; right: 0; border: 0; z-index: 5;" ><img src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+  <header id="banner">
+    <header class="site-header">
+  <div class="container">
+
+    <nav class="site-nav">
+      <button class="site-nav-toggle">
+        <span class="screen-reader">Menu</span>
+        <svg class="site-nav-hamburger" viewBox="0 0 18 14">
+          <path d="M0 0h18v2H0zM0 6h18v2H0zM0 12h18v2H0z"></path>
+        </svg>
+        <svg class="site-nav-close" viewBox="0 0 18 14">
+          <path d="M16 12.586L3.414 0 2 1.414 14.586 14 16 12.586z"></path>
+          <path d="M2 12.586L14.586 0 16 1.414 3.414 14 2 12.586z"></path>
+        </svg>
+      </button>
+
+      <ul class="site-nav-list clearfix">
+
+          
+          <li>
+          
+            <a href="/">Home</a>
+          </li>
+
+          
+          <li>
+          
+            <a href="/blogs">Blogs</a>
+          </li>
+
+          
+          <li class="site-nav-current">
+          
+            <a href="/join">Join</a>
+          </li>
+
+          
+          <li>
+          
+            <a href="/about">About</a>
+          </li>
+
+      </ul>
+    </nav>
+
+    <h1 class="site-title">
+      <a href="/">Bitcoin Mumble</a>
+    </h1>
+  </div>
+</header>
+
+  </header>
+  <main class="container">
+    <h3 id="join">Join</h3>
+<p>You’ll need a <a href="https://github.com">Github.com</a> account.<br />
+Our repo is <a href="https://github.com/bitcoin-mumble/bitcoin-mumble.github.io">github.com/bitcoin-mumble/bitcoin-mumble.github.io</a>.<br />
+You’ll have to fork it and follow the below to become an author.</p>
+
+<h3 id="joining-as-a-new-author">Joining as a new author</h3>
+<p>Each new author should do the following.</p>
+<ol>
+  <li>Fork <a href="https://github.com/bitcoin-mumble/bitcoin-mumble.github.io">https://github.com/bitcoin-mumble/bitcoin-mumble.github.io</a></li>
+  <li>Add yourself on <code class="highlighter-rouge">_config.yml</code> on the <code class="highlighter-rouge">authors</code> section: [<a href="https://github.com/bitcoin-mumble/bitcoin-mumble.github.io/edit/source/_config.yml">LINK</a>]
+    <div class="language-yml highlighter-rouge"><pre class="highlight"><code><span class="s">authors</span><span class="pi">:</span>
+<span class="s">​    ​    ​</span>   <span class="c1"># (must not contain special characters)</span>
+  <span class="s">sirmeow</span><span class="pi">:</span> <span class="c1"># Author Identifier for url+folder</span>
+<span class="s">​    name</span><span class="pi">:</span> <span class="s">SirMeow</span>
+<span class="s">​    twitter</span><span class="pi">:</span> <span class="s">OneSirMeow</span>
+<span class="s">​    byline</span><span class="pi">:</span> <span class="s">Coder, trader, getting bored easily af</span>
+<span class="s">​</span>    <span class="c1"># Info about yourself</span>
+<span class="s">​</span>    <span class="c1"># (name, site, twitter, github, telegram, byline)</span>
+</code></pre>
+    </div>
+  </li>
+  <li>Create a sub-folder with their username on the <code class="highlighter-rouge">_blogs</code> folder.
+    <ul>
+      <li>Link: <a href="https://github.com/bitcoin-mumble/bitcoin-mumble.github.io/new/source/blogs/MYAUTHORID/_posts/">https://github.com/bitcoin-mumble/bitcoin-mumble.github.io/new/source/blogs/MYAUTHORID/_posts/</a></li>
+      <li>Replace MYNAME with your Author Identifier.</li>
+      <li>The name of the sub-folder will be used on the permalink of the blog posts as <code class="highlighter-rouge">/blogs/{authorId}/{post-title-slug}</code></li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="creating-new-blog-post">Creating new blog post</h2>
+<ol>
+  <li>Find your blog posts sub-folder <code class="highlighter-rouge">/blogs/{authorId}/_posts/</code></li>
+  <li>Create a new file <code class="highlighter-rouge">YYYY-MM-DD-{some-title}.md</code>  (the date part is required)</li>
+  <li>Add the following on the top of the post file
+    <div class="language-md highlighter-rouge"><pre class="highlight"><code><span class="nn">---</span>
+<span class="s">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="s">title</span><span class="pi">:</span> <span class="s">Analyzing the seasonality of Black-swan events on the altcoin markets</span>
+<span class="s">author</span><span class="pi">:</span> <span class="s">sirmeow</span>
+<span class="s">slug</span><span class="pi">:</span> <span class="s">black-swansons</span>
+<span class="nn">---</span>
+{MAIN BLOG POST CONTENT HERE}
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<ul>
+  <li>The only required metadata are (layout, title, author).</li>
+  <li>The <code class="highlighter-rouge">slug</code> will be used as the last part of the permalink url &amp; by default it will take the name of the post file.</li>
+  <li>The final URL will be <code class="highlighter-rouge">/blogs/{username}/{YYYY}/{slug}</code></li>
+</ul>
+
+<h2 id="more-info">More info</h2>
+<p>You can read some more info around the tech thinking on <a href="/blogs/sirmeow/2017/making-of">/blogs/sirmeow/2017/making-of</a>.</p>
+
+<p>Feel free to ask on Mumble for more info.</p>
+
+  </main>
+  
+    <footer id="site-footer">
+      <footer class="site-footer">
+  <div class="container">
+    BitcoinMumble is a community of crypto-ethusiants, traders and developers hanging around and discussing via audio &amp; text through Mumble.
+    Feel free to join us at <a href="https://bitcoinmumble.com">bitcoinmumble.com</a>.
+  </div>
+</footer>
+
+    </footer>
+  
+</body>
+</html>
